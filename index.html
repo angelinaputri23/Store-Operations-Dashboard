@@ -3,95 +3,171 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Store Operations Dashboard</title>
+
   <style>
-    * { box-sizing: border-box; }
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f3f6f5;
-      color: #20312c;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6fb;
+      color: #1f2937;
+      min-height: 100vh;
+    }
+
     header {
-      background: #173d32;
+      background: linear-gradient(135deg, #172554, #1d4ed8);
       color: white;
       padding: 48px 24px;
       text-align: center;
     }
-    header h1 { margin: 0 0 12px; font-size: 32px; }
-    header p { margin: 0; color: #d4e6dc; }
+
+    header h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: #dbeafe;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
     main {
-      max-width: 1050px;
-      margin: 32px auto;
-      padding: 0 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 56px;
     }
-    .cards {
+
+    .section-title {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .section-description {
+      color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .dashboard-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
     }
-    .card {
-      display: block;
+
+    .dashboard-card {
+      display: flex;
+      flex-direction: column;
       background: white;
-      padding: 26px;
-      border-radius: 16px;
-      border: 1px solid #dce5e0;
+      padding: 28px;
+      border-radius: 18px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
       text-decoration: none;
       color: inherit;
-      box-shadow: 0 4px 14px #193b3010;
-      transition: transform .2s, box-shadow .2s;
+      min-height: 235px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 22px #193b3020;
+
+    .dashboard-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
     }
-    .icon { font-size: 32px; }
-    .card h2 { font-size: 20px; margin: 18px 0 10px; }
-    .card p { color: #66756e; line-height: 1.6; }
-    .open { color: #246b50; font-weight: bold; }
+
+    .icon {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .dashboard-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #172554;
+    }
+
+    .dashboard-card p {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .open-link {
+      margin-top: auto;
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
-      color: #718078;
+      padding: 22px;
+      color: #94a3b8;
       font-size: 13px;
-      padding: 24px;
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>Store Operations Dashboard</h1>
-    <p>Operations Support · Analytics &amp; Planning</p>
+    <p>Your central hub for store performance, point redemption, and stock planning.</p>
   </header>
 
   <main>
-    <h2>Select a Dashboard</h2>
-    <p>Access your store performance reports from one central portal.</p>
+    <h2 class="section-title">Our Dashboards</h2>
+    <p class="section-description">
+      Select a dashboard below to view the relevant store data and analysis.
+    </p>
 
-    <div class="cards">
-      <a class="card" href="./Store-Sales-Performance/">
+    <div class="dashboard-grid">
+
+      <!-- 1. Store Sales Performance -->
+      <a class="dashboard-card" href="./Store-Sales-Performance/">
         <div class="icon">📊</div>
-        <h2>Store Sales Performance</h2>
-        <p>Analyze sales trends, revenue, and top-performing products.</p>
-        <span class="open">Open dashboard →</span>
+        <h3>Store Sales Performance</h3>
+        <p>
+          Track sales results, transaction performance, revenue trends,
+          and key sales indicators.
+        </p>
+        <span class="open-link">Open Dashboard →</span>
       </a>
 
-      <a class="card" href="./redeemed-points.html">
-        <div class="icon">🎟️</div>
-        <h2>Redeemed Points Dashboard</h2>
-        <p>Review point redemption activity and popular rewards.</p>
-        <span class="open">Open dashboard →</span>
+      <!-- 2. Redeemed Points Dashboard -->
+      <a class="dashboard-card" href="./Redeemed-Points-Dashboard/">
+        <div class="icon">🎁</div>
+        <h3>Redeemed Points Dashboard</h3>
+        <p>
+          Monitor redeemed points, voucher redemption activity,
+          popular rewards, and redemption trends.
+        </p>
+        <span class="open-link">Open Dashboard →</span>
       </a>
 
-      <a class="card" href="./index%20(3).html">
+      <!-- 3. Store Stock & Promo Planning -->
+      <a class="dashboard-card" href="./Store-Stock-Promo-Planning/">
         <div class="icon">📦</div>
-        <h2>Store Stock &amp; Promo Planning</h2>
-        <p>Review inventory availability and stock replenishment signals.</p>
-        <span class="open">Open dashboard →</span>
+        <h3>Store Stock &amp; Promo Planning</h3>
+        <p>
+          Review stock information, identify promotional opportunities,
+          and support store planning decisions.
+        </p>
+        <span class="open-link">Open Dashboard →</span>
       </a>
+
     </div>
   </main>
 
-  <footer>Store Operations · Internal Analytics Portal</footer>
+  <footer>
+    Store Operations Dashboard · Internal Operations Portal
+  </footer>
+
 </body>
 </html>
