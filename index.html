@@ -21,37 +21,37 @@
     }
 
     header {
-      background: linear-gradient(135deg, #172554, #1d4ed8);
+      background: linear-gradient(135deg, #172554, #2563eb);
       color: white;
-      padding: 48px 24px;
       text-align: center;
+      padding: 55px 20px;
     }
 
     header h1 {
       font-size: clamp(28px, 4vw, 40px);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     header p {
-      color: #dbeafe;
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.7;
+      color: #dbeafe;
     }
 
     main {
       max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 24px 56px;
+      margin: auto;
+      padding: 42px 24px 60px;
     }
 
     .section-title {
+      font-size: 25px;
       margin-bottom: 10px;
-      font-size: 24px;
     }
 
     .section-description {
       color: #64748b;
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 28px;
     }
 
@@ -64,15 +64,15 @@
     .dashboard-card {
       display: flex;
       flex-direction: column;
-      background: white;
+      min-height: 260px;
       padding: 28px;
-      border-radius: 18px;
+      background: white;
       border: 1px solid #e5e7eb;
-      box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+      border-radius: 18px;
       text-decoration: none;
       color: inherit;
-      min-height: 235px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .dashboard-card:hover {
@@ -81,35 +81,35 @@
     }
 
     .icon {
-      font-size: 34px;
-      margin-bottom: 20px;
+      font-size: 36px;
+      margin-bottom: 22px;
     }
 
-    .dashboard-card h3 {
+    .dashboard-card h2 {
       font-size: 20px;
-      margin-bottom: 12px;
       color: #172554;
+      margin-bottom: 12px;
     }
 
     .dashboard-card p {
       font-size: 14px;
       color: #64748b;
-      line-height: 1.7;
+      line-height: 1.8;
       margin-bottom: 24px;
     }
 
     .open-link {
       margin-top: auto;
       color: #2563eb;
-      font-size: 14px;
       font-weight: bold;
+      font-size: 14px;
     }
 
     footer {
       text-align: center;
-      padding: 22px;
-      color: #94a3b8;
+      padding: 24px;
       font-size: 13px;
+      color: #94a3b8;
     }
   </style>
 </head>
@@ -118,46 +118,58 @@
 
   <header>
     <h1>Store Operations Dashboard</h1>
-    <p>Your central hub for store performance, point redemption, and stock planning.</p>
+    <p>
+      Your central hub for store performance, point redemption,
+      and stock & promotion planning.
+    </p>
   </header>
 
   <main>
     <h2 class="section-title">Our Dashboards</h2>
     <p class="section-description">
-      Select a dashboard below to view the relevant store data and analysis.
+      Select a dashboard below to explore store data and performance.
     </p>
 
     <div class="dashboard-grid">
 
       <!-- 1. Store Sales Performance -->
-      <a class="dashboard-card" href="./Store-Sales-Performance/">
+      <a
+        class="dashboard-card"
+        href="./Store-Sales-Performance/"
+      >
         <div class="icon">📊</div>
-        <h3>Store Sales Performance</h3>
+        <h2>Store Sales Performance</h2>
         <p>
-          Track sales results, transaction performance, revenue trends,
-          and key sales indicators.
+          Analyze sales performance, transaction results,
+          revenue trends, and key sales indicators.
         </p>
         <span class="open-link">Open Dashboard →</span>
       </a>
 
       <!-- 2. Redeemed Points Dashboard -->
-      <a class="dashboard-card" href="./Redeemed-Points-Dashboard/">
+      <a
+        class="dashboard-card"
+        href="./Redeemed-Points-Dashboard/"
+      >
         <div class="icon">🎁</div>
-        <h3>Redeemed Points Dashboard</h3>
+        <h2>Redeemed Points Dashboard</h2>
         <p>
-          Monitor redeemed points, voucher redemption activity,
+          Monitor redeemed points, voucher transactions,
           popular rewards, and redemption trends.
         </p>
         <span class="open-link">Open Dashboard →</span>
       </a>
 
       <!-- 3. Store Stock & Promo Planning -->
-      <a class="dashboard-card" href="./Store-Stock-Promo-Planning/">
+      <a
+        class="dashboard-card"
+        href="./Store-Stock-Promo-Planning/"
+      >
         <div class="icon">📦</div>
-        <h3>Store Stock &amp; Promo Planning</h3>
+        <h2>Store Stock &amp; Promo Planning</h2>
         <p>
-          Review stock information, identify promotional opportunities,
-          and support store planning decisions.
+          Review stock information, identify promotional
+          opportunities, and support store planning.
         </p>
         <span class="open-link">Open Dashboard →</span>
       </a>
